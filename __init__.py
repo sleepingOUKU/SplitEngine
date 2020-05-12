@@ -1,18 +1,16 @@
 from engine.Engine import *
-from menu.StartMenu import *
-from engine.SplitAnimation import *
+from animation.SplitAnimation import *
 from engine.FrameContainer import *
+from config.EngineConfig import *
+from comons.FileDictionary import *
 
 def main():
-    width = 600
-    height = 500
-    name = "myGame"
 
     # 框架图层容器
     frameContainer = FrameContainer()
 
     # 初始化engine和screen
-    engine = Engine(ScreenDictionary.SCREEN_WIDTH,ScreenDictionary.SCREEN_HEIGHT,ScreenDictionary.SCREEN_NAME,
+    engine = Engine(EngineConfig.SCREEN_WIDTH,EngineConfig.SCREEN_HEIGHT,EngineConfig.SCREEN_NAME,
                     frameContainer)
     screen = engine.createScreen()
 
@@ -20,11 +18,13 @@ def main():
     backGround = pygame.image.load(FileDictionary.MENU_BACKGROUD)
     backGround = pygame.transform.smoothscale(backGround, (100, 100))
     test = SplitAnimation(screen, backGround, 100, 100, 100, 100)
-
+    test.wordMove((200,200),20)
     frameContainer.appendFirstFrame(test)
 
+    # 设置背景图片
     engine.setBackground(FileDictionary.MENU_BACKGROUD)
 
+    # 引擎渲染启动
     engine.start()
     pass
 

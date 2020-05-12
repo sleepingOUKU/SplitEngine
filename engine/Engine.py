@@ -55,27 +55,27 @@ class Engine:
 
         for splitAnimation in self.frameContainer.getFirstFrame() :
             self.surfaceFrame(splitAnimation)
-            pass;
+            pass
 
         for splitAnimation in self.frameContainer.getSecondFrame() :
             self.surfaceFrame(splitAnimation)
-            pass;
+            pass
 
         for splitAnimation in self.frameContainer.getThirdFrame() :
             self.surfaceFrame(splitAnimation)
-            pass;
+            pass
 
         for splitAnimation in self.frameContainer.getSixthFrame() :
             self.surfaceFrame(splitAnimation)
-            pass;
+            pass
 
         for splitAnimation in self.frameContainer.getFifthFrame() :
             self.surfaceFrame(splitAnimation)
-            pass;
+            pass
 
         for splitAnimation in self.frameContainer.getSixthFrame() :
             self.surfaceFrame(splitAnimation)
-            pass;
+            pass
         pass
 
 
